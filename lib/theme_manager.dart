@@ -6,9 +6,11 @@ class ThemeManager {
   static const Color _white = Color.fromRGBO(250, 250, 255, 1);
   static const Color _black = Color.fromRGBO(25, 25, 25, 1);
   static const Color _accent = Color.fromRGBO(238, 144, 37, 1);
+  static const Color _cardSurface = Color.fromRGBO(240, 240, 245, 1);
 
-  static const Color _whiteDark = Color.fromRGBO(35, 35, 36, 1);
+  static const Color _whiteDark = Color.fromRGBO(36, 32, 38, 1);
   static const Color _accentDark = Color.fromRGBO(199, 91, 18, 1);
+  static const Color _cardSurfaceDark = Color.fromRGBO(0, 0, 0, 0.2);
 
   static ThemeData lightTheme = ThemeData(
     colorScheme: const ColorScheme(
@@ -26,6 +28,7 @@ class ThemeManager {
     ),
     cardTheme: const CardTheme(
       elevation: 2,
+      color: _cardSurface,
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: _accent,
@@ -57,12 +60,13 @@ class ThemeManager {
       shadow: _black,
     ),
     cardTheme: const CardTheme(
-      elevation: 2,
+      elevation: 0,
+      color: _cardSurfaceDark,
     ),
     appBarTheme: const AppBarTheme(
       backgroundColor: _accentDark,
       foregroundColor: _white,
-      elevation: 2,
+      elevation: 0,
       shadowColor: _black,
       actionsIconTheme: IconThemeData(
         color: _whiteDark,
